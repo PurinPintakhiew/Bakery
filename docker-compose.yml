@@ -1,0 +1,12 @@
+version: "3"
+services:
+
+  test-db:
+    build: ./database
+    container_name: test-db
+    environment:
+      POSTGRES_DB: shop
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432

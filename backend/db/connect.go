@@ -10,7 +10,7 @@ import (
 var DB *gorm.DB
 
 func ConnectDB() {
-	dsn := "host=10.133.0.131 user=postgres password=password dbname=shop port=5432 sslmode=disable"
+	dsn := "host=192.168.1.29 user=postgres password=password dbname=shop port=5432 sslmode=disable"
 	data, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		fmt.Println("failed to connect database")
